@@ -1,0 +1,71 @@
+/*todoアプリのCSS*/
+body {
+    background-color: #eaf6fd;
+}
+h1,
+p {
+    text-align: center;
+}
+.form {
+    width: 300px;
+    height: 100px;
+}
+.submit-btn {
+    display: block;
+    margin: 0 auto;
+}
+/*ボタンの色*/
+.add-btn {
+    background-color: #91d3ea;
+}
+.del-btn {
+    background-color: #ee869a;
+}
+.edit-btn {
+    background-color: #ccdc43;
+}
+.update-btn {
+    background-color: #f8b73d;
+}
+.password_btn{
+    background-color: #f8b73d;
+    display: block;
+    margin: 50px auto 0;
+}
+.login_btn{
+    font-size: large;
+    background-color: #f8b73d;
+    display: block;
+    margin: 0 auto 0;
+}
+/*ボタンの色ここまで*/
+#getold {
+    text-align: center;
+    margin-bottom: 50px;
+}
+#deleteAll {
+    text-align: center;
+    margin-bottom: 50px;
+}
+#logOut {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#add {
+    text-align: center;
+    margin-bottom: 50px;
+}
+#decision {
+    text-align: center;
+}
+.group {
+    text-align: center;
+    background-color: #ffffff;
+    border: solid 1px #ccc;
+    width: 500px;
+    padding: 50px;
+    display: block;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
