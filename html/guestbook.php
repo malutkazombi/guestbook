@@ -1,5 +1,5 @@
 <?php
-require_once '/var/www/html/functions.php';
+require_once __dir__.('/../php/functions.php');
 
 require_login();
 
@@ -119,7 +119,7 @@ try {
         <input type='hidden' name='token' value="<?php echo h(generate_token()); ?>">
     </form>
 
-    <form id='logOut' action='logout.php' method='post'>
+    <form id='logOut' action='/../php/logout.php' method='post'>
         <input class="edit-btn" type='submit' value='Logout' />
         <input type='hidden' name='token' value="<?php echo h(generate_token()); ?>">
     </form>

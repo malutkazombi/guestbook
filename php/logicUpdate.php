@@ -56,3 +56,4 @@ if (isset($_POST['update'])) {
         die('処理に失敗しました');
     }
 }
+?>

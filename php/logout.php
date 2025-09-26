@@ -1,5 +1,5 @@
 <?php
-require_once '/var/www/html/functions.php';
+require_once __dir__.('/../php/functions.php');
 require_login();
 
 if (!validate_token(filter_input(INPUT_POST, 'token'))){

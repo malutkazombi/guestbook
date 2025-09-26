@@ -1,6 +1,6 @@
 <?php
 require_once '/var/www/config/pepper.php';
-require_once '/var/www/html/functions.php';
+require_once __dir__.('/../php/functions.php');
 if (isset($_POST['User_id']) && (isset($_POST['User_name'])) && (isset($_POST['password']))) {
   try {
     $db = new PDO('mysql:host=mysql;dbname=test;charset=utf8', 'test', 'test');

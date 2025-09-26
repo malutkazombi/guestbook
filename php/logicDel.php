@@ -1,8 +1,4 @@
 <?php
-if (!isset($_POST['del'])) {
-    header("Location:guestbook.php");
-    exit;
-}
 $del = $_POST['del'];
 
 try {

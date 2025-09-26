@@ -1,6 +1,6 @@
 <?php
 require_once '/var/www/config/pepper.php';
-require_once '/var/www/html/functions.php';
+require_once __DIR__.('/../php/functions.php');
 session_start();
 if (validate_token(filter_input(INPUT_POST, 'token')) && isset($_POST['User_id']) && (isset($_POST['password']))) {
   $user_id = filter_input(INPUT_POST, 'User_id');
