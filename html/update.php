@@ -1,4 +1,5 @@
-<?php require_once(__DIR__.'/../php/logicUpdate.php');?>
+<?php require_once(__DIR__ . '/../php/logicUpdate.php');
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -20,6 +21,7 @@
             <textarea class="form" name="newmessage" value="" rows="3" cols="20" wrap="hard"><?php echo $data['message']; ?></textarea>
             <input class="update-btn submit-btn" type="submit" value="更新" />
             <input type='hidden' name='decision' value='<?php echo $update; ?>' />
+            <input type="hidden" name="token" value="<?= h(generate_token()) ?>">
         </form>
     <?php endforeach ?>
 </body>

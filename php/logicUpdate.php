@@ -5,10 +5,10 @@ if (!isset($_POST['update']) && (!isset($_POST['newdata'])) && !isset($_POST['ne
     exit;
 }
 
-if (isset($_POST['newdata']) && (isset($_POST['newmessage']))) {
-    $newdata = $_POST['newdata'];
-    $newmessage = $_POST['newmessage'];
-    $decision = $_POST['decision'];
+if (validate_token(filter_input(INPUT_POST, 'token')) && isset($_POST['newdata']) && (isset($_POST['newmessage']))) {
+    $newdata = filter_input(INPUT_POST, 'newdata');
+    $newmessage = filter_input(INPUT_POST, 'newmessage');
+    $decision = filter_input(INPUT_POST, 'desicion');
 
     //更新用
     try {
@@ -32,7 +32,7 @@ if (isset($_POST['newdata']) && (isset($_POST['newmessage']))) {
 
 $dataList = [];
 $update = '';
-if (isset($_POST['update'])) {
+if (validate_token(filter_input(INPUT_POST, 'token')) && isset($_POST['update'])) {
     //更新するデータをidをもとに表示する
     $update = $_POST['update'];
     try {

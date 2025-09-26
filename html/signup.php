@@ -1,4 +1,5 @@
-<?php include_once(__DIR__.'/../php/logicSignup.php');?>
+<?php include_once(__DIR__ . '/../php/logicSignup.php');
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -23,7 +24,7 @@
       <input type="text" name="password" value="" rows="1" cols="3" wrap="hard"></input>
       <br>
       <input class="password_btn" type="submit" value="Submit" />
-      <input type="hidden" name="token" value="<?=h(generate_token())?>">
+      <input type="hidden" name="token" value="<?= h(generate_token()) ?>">
     </form>
   </div>
 </body>
