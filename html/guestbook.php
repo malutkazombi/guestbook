@@ -1,3 +1,6 @@
+<?php
+include_once __DIR__.'/../php/logicGuestbook.php'?>
+
 <!DOCTYPE html>
 <html lang="ja">
 

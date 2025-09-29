@@ -1,5 +1,5 @@
 <?php
-
+require_once 'functions.php';
 if (!isset($_POST['update']) && (!isset($_POST['newdata'])) && !isset($_POST['newmessage'])) {
     header("Location:guestbook.php");
     exit;
@@ -8,7 +8,7 @@ if (!isset($_POST['update']) && (!isset($_POST['newdata'])) && !isset($_POST['ne
 if (validate_token(filter_input(INPUT_POST, 'token')) && isset($_POST['newdata']) && (isset($_POST['newmessage']))) {
     $newdata = filter_input(INPUT_POST, 'newdata');
     $newmessage = filter_input(INPUT_POST, 'newmessage');
-    $decision = filter_input(INPUT_POST, 'desicion');
+    $decision = filter_input(INPUT_POST, 'decision');
 
     //更新用
     try {
@@ -34,7 +34,7 @@ $dataList = [];
 $update = '';
 if (validate_token(filter_input(INPUT_POST, 'token')) && isset($_POST['update'])) {
     //更新するデータをidをもとに表示する
-    $update = $_POST['update'];
+    $update = filter_input(INPUT_POST, 'update');
     try {
         $db = new PDO('mysql:host=mysql;dbname=test;charset=utf8', 'test', 'test');
         $sto = $db->prepare('SELECT name, message, ID FROM guest_book WHERE id=:id');
